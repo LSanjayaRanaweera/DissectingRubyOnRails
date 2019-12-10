@@ -12,7 +12,7 @@ puts "3 Topics created"
 		topic_id: Topic.last.id
 		)
 end
-puts "10 Blogposts are created"
+puts "10 Blogposts created"
 
 5.times do |skill|
 	Skill.create!(
@@ -20,7 +20,7 @@ puts "10 Blogposts are created"
 		percentage_utilized: 15
 		)
 end
-puts "5 skills are created"
+puts "5 Skills created"
 
 8.times do |portfolio_item|
 	Portfolio.create!(
@@ -41,8 +41,15 @@ end
 		thumb_image: "https://via.placeholder.com/350x200",
 		)
 end
-puts "9 Portfolio items are created"
+puts "9 Portfolio items created"
 
+3.times do |technology|
+	Portfolio.last.technologies.create!(
+		name: "Technology#{technology}",
+		portfolio_id: Portfolio.last.id
+		)
+end
+puts "3 Technologies created"
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
