@@ -9,13 +9,13 @@ class Portfolio < ApplicationRecord
 	#Controller Create#action Requirements
 	validates_presence_of :title, :body, :main_image, :thumb_image
 
-	#For DB queries
+	#To run Specific DB queries
 	#Class Method
 	def self.angular
 		where(subtitle: 'Angular')
 	end
 	#Scope Method
-	scope :ruby_on_rails_portfolio_utems, -> {where(subtitle: 'Ruby on Rails')}
+	scope :ruby_on_rails_portfolio_items, -> {where(subtitle: 'Ruby on Rails')}
 
 	#Default Image setting >> Method in Model/concern
 	after_initialize :set_defaults
