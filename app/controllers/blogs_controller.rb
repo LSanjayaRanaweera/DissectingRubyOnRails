@@ -62,7 +62,7 @@ class BlogsController < ApplicationController
   end
 
   def toggle_status
-    # byebug
+    ## byebug << was initially intalled at this point during the creation of this method!
     if @blog.published?
     @blog.draft!
     elsif @blog.draft?
